@@ -26,8 +26,9 @@ jobs:
         
       - name: Install Snyk
         uses: snyk/actions/setup@master
-        env:
-          node-version: ${{ secrets.SNYK_TOKEN }}
+
           
       - name: snyk tests
         run: snyk test -d --print-deps
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
