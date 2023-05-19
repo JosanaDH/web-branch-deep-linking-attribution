@@ -34,9 +34,3 @@ jobs:
           
       - name: snyk tests
         run: snyk test -d --print-deps
-
-
-
-
-
-
