@@ -29,6 +29,6 @@ jobs:
 
           
       - name: snyk tests
-        run: snyk test -d --print-deps
+        run: snyk test -d --print-deps --dev
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
